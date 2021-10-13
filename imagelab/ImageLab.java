@@ -303,8 +303,6 @@ public class ImageLab {
                         System.out.print("please select an image file.");
                     }
                 }
-                else
-                    System.out.print("please select an image.");
             } //actionPerformed
         };
     } // makeOpenListener
