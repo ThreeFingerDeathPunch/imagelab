@@ -289,19 +289,13 @@ public class ImageLab {
                 fd.setVisible(true);
                 String theFile = fd.getFile();
                 if (theFile != null) {
-                    String extension = theFile.substring(theFile.lastIndexOf(".") + 1);
-                    if(extension.equals("jpg") || extension.equals("gif")) {
-                        String theDir = fd.getDirectory();
-                        //System.out.println("The file's name is " + theDir + theFile);
-                        improvider = new ImgProvider(theDir + theFile);
-                        improvider.setLab(theLab);
-                        improvider.showImage(theDir + theFile);
-                        images.add(improvider);
-                        impro = improvider; //current image provider is set
-                    }
-                    else {
-                        System.out.print("please select an image file.");
-                    }
+                    String theDir = fd.getDirectory();
+                    //System.out.println("The file's name is " + theDir + theFile);
+                    improvider = new ImgProvider(theDir + theFile);
+                    improvider.setLab(theLab);
+                    improvider.showImage(theDir + theFile);
+                    images.add(improvider);
+                    impro = improvider; //current image provider is set
                 }
             } //actionPerformed
         };
