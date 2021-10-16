@@ -290,7 +290,6 @@ public class ImageLab {
                 String theFile = fd.getFile();
                 if (theFile != null) {
                     String theDir = fd.getDirectory();
-                    //System.out.println("The file's name is " + theDir + theFile);
                     improvider = new ImgProvider(theDir + theFile);
                     improvider.setLab(theLab);
                     improvider.showImage(theDir + theFile);
